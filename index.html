@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nuestro Amor</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    <nav class="sidebar">
+        <div class="logo-details">
+            <i class='bx bxs-heart bx-tada'></i>
+            <span class="logo_name">Nuestro Amor ❤️🥺</span>
+        </div>
+        
+        <ul class="nav-links">
+            <li>
+                <a href="#home" class="active">
+                    <i class='bx bxs-home'></i>
+                    <span class="link_name">Inicio</span>
+                </a>
+            </li>
+            <li>
+                <a href="#memories">
+                    <i class='bx bxs-photo-album'></i>
+                    <span class="link_name">Recuerdos</span>
+                </a>
+            </li>
+            <li>
+                <a href="#poems">
+                    <i class='bx bxs-book-heart'></i>
+                    <span class="link_name">Poemas</span>
+                </a>
+            </li>
+            <li>
+                <a href="#journal">
+                    <i class='bx bxs-pen'></i>
+                    <span class="link_name">Diario</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+
+    <main class="home-section">
+        <section id="home" class="section active">
+            <h1 class="main-title">Nuestra Historia de Amor 💗😍</h1>
+            <div class="love-cards">
+                <div class="card">
+                    <i class='bx bxs-camera-movie'></i>
+                    <h3>Momentos</h3>
+                    <p>Cada instante juntos es un tesoro.</p>
+                </div>
+                <div class="card">
+                    <i class='bx bxs-heart'></i>
+                    <h3>Amor</h3>
+                    <p>Un sentimiento que crece cada día.</p>
+                </div>
+                <div class="card">
+                    <i class='bx bxs-star'></i>
+                    <h3>Futuro</h3>
+                    <p>Construyendo sueños juntos.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="memories" class="section">
+            <h2 class="main-title">Nuestros Recuerdos</h2>
+            <div class="memory-grid"></div>
+        </section>
+
+        <section id="poems" class="section">
+            <h2 class="main-title">Poemas de Amor</h2>
+            <div class="poems-container"></div>
+        </section>
+
+        <section id="journal" class="section">
+            <h2 class="main-title">Nuestro Diario</h2>
+            <div class="journal-container">
+                <div class="journal-entry">
+                    <textarea id="newEntry" placeholder="Escribe tus pensamientos aquí..."></textarea>
+                    <button id="saveEntry" class="save-btn">
+                        <i class='bx bxs-save'></i>
+                        Guardar
+                    </button>
+                </div>
+                <div id="entriesList" class="entries-list"></div>
+            </div>
+        </section>
+    </main>
+
+    <script src="js/navigation.js"></script>
+    <script src="js/memories.js"></script>
+    <script src="js/poems.js"></script>
+    <script src="js/journal.js"></script>
+</body>
+</html>
