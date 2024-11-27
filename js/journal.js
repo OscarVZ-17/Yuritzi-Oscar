@@ -10,9 +10,11 @@ document.addEventListener('DOMContentLoaded', () => {
         const content = newEntryText.value.trim();
         if (!content) return;
 
+        const currentUser = localStorage.getItem('currentUser');
         const entry = {
             id: Date.now(),
             content,
+            author: currentUser,
             date: new Date().toLocaleDateString()
         };
 
@@ -28,8 +30,12 @@ document.addEventListener('DOMContentLoaded', () => {
         entriesList.innerHTML = entries.map(entry => `
             <div class="entry fade-in">
                 <div class="entry-header">
-                    <i class='bx bxs-calendar'></i>
-                    <span>${entry.date}</span>
+                    <div class="entry-meta">
+                        <i class='bx bxs-user'></i>
+                        <span class="entry-author">${entry.author}</span>
+                        <i class='bx bxs-calendar'></i>
+                        <span>${entry.date}</span>
+                    </div>
                 </div>
                 <p>${entry.content}</p>
             </div>
@@ -48,5 +54,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
+    // Initial render
     renderEntries();
 });
